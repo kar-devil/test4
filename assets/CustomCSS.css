@@ -1,0 +1,491 @@
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans';
+}
+
+body{
+  background-color: #ffffff;
+}
+
+#publicis-logo {
+  width: 50px;
+  margin: 10px
+}
+
+/* Publicis Final Colors */
+:root {
+  --primary-pub-color-1: #323232;
+  --primary-pub-color-2: #BDAD78;
+  --primary-pub-color-2-light: #D0C59F;
+  --tertiary-pub-color-1: #7030A0;
+  --tertiary-pub-color-3: #4627CC;
+  --tertiary-pub-color-4: #0EBAC5;
+  --tertiary-pub-color-5: #0B8445;
+  --tertiary-pub-color-6: #FFD511;
+  --tertiary-pub-color-6-light: #FFF4C2;
+  --tertiary-pub-color-7: #FC8B3C;
+  --tertiary-pub-color-8: #A30020;
+}
+/*
+.main{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}*/
+h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #C09A5E;
+  font-size: 3rem;
+}
+
+.roller{
+  height: 4.125rem;  /* Velikost rámu*/
+  line-height: 3rem; /* Vzdálenost prvků pod sebou*/
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000633;
+}
+
+
+#spare-time{
+  font-size: 0.3rem;
+  font-style: italic;
+  letter-spacing: 0.3rem;
+  margin-top: 0;
+  color: #000000;
+
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 7s infinite;
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -5rem;
+  }
+  50%{
+    top: -9rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 2.125rem;
+}
+
+  .roller{
+  height: 2.6rem;
+  line-height: 2.125rem;
+  }
+
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .roller #rolltext {
+  animation: slide-mob 5s infinite;
+}
+
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big_spacing {
+height:10vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.small_spacing {
+height:4vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  color: #FFF;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--tertiary-pub-color-3);
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus,
+.warning:focus, .warning:hover
+.info:focus, .info:hover
+.btn:focus, .btn:hover {
+  color: #FFF;
+  background-color: var(--primary-pub-color-2);
+  border-color: var(--primary-pub-color-2);
+}
+
+.warning {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #FFF;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--tertiary-pub-color-8);
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.info {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px !important;
+  color: #FFF;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--tertiary-pub-color-4);
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Icons */
+#publicis-refresh {
+  color: var(--primary-pub-color-1);
+}
+
+#publicis-question {
+  color: var(--tertiary-pub-color-6);
+}
+
+#publicis-check {
+  color: var(--tertiary-pub-color-5);
+}
+
+#publicis-ban {
+  color: var(--tertiary-pub-color-8);
+}
+
+#publicis-exclamation {
+  color: var(--tertiary-pub-color-8)
+}
+
+/* Misc - Jedná se o podlouhlou čáru oddělující text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
+}
+
+/* Dropdowny */
+.Select-control, .Select-menu-outer, .Select-multi-value-wrapper, .select-up, .is-open .Select-control {
+  background-color: #fff;
+  color: inherit;
+}
+
+.Select-control {
+  border: 1px solid #bbb !important;
+  height: 45.6px !important;
+}
+
+.Select-placeholder, .Select--single > .Select-control .Select-value {
+  line-height: 45px !important;
+}
+
+/* Selected Item font color */
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+  color: rgb(50, 50, 50);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: #DDD4BB;
+  box-shadow: inset 0 1px 1px #f8d36e12, 0 0 0 3px #BDAB7826 !important;
+  background: #fff;
+}
+
+/* Alerty */
+.publicis-alert-danger {
+  background-color: var(--tertiary-pub-color-8);
+  color: #fff;
+  /* font-size: 2rem; */
+}
+
+.publicis-alert-success {
+  background-color: var(--tertiary-pub-color-5);
+  color: #fff;
+  /* font-size: 2rem; */
+}
+
+.publicis-alert-warning {
+  background-color: var(--tertiary-pub-color-6-light);
+  color: var(--primary-pub-color-1);
+  /* font-size: 2rem; */
+}
+
+/* DatePicker Range */
+.CalendarDay__selected_span {
+  background: var(--primary-pub-color-2-light);
+  border: 1px double var(--primary-pub-color-2-light);
+}
+
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: var(--primary-pub-color-2);
+  border: 1px double var(--primary-pub-color-2);
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: var(--primary-pub-color-2);
+  border: 1px double var(--primary-pub-color-2);
+}
+
+.CalendarDay__highlighted_calendar:active,
+.CalendarDay__highlighted_calendar:hover {
+  background: var(--primary-pub-color-2-light);
+}
+
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+  background: var(--primary-pub-color-2-light);
+  border: 1px double var(--primary-pub-color-2);
+  color: #fff;
+}
+
+.CalendarDay__hovered_span:active {
+  background: var(--primary-pub-color-2);
+  border: 1px double var(--primary-pub-color-2);
+  color: #fff;
+}
+
+.DateInput_input {
+  border-radius: 1px;
+}
+
+.DateInput_input__focused {
+  border-bottom: 2px solid var(--primary-pub-color-2);
+}
+
+/* Question Mark Button on Calendar */
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-right: 33px solid var(--primary-pub-color-2-light);
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight:hover::before {
+  border-right: 33px solid var(--primary-pub-color-2);
+}
+
+/* Cards and Navbar */
+.card {
+  border: none;
+}
+
+.card-header {
+  border: none;
+  text-align: center;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #fff;
+  color: var(--primary-pub-color-1);
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary-pub-color-2);
+}
+
+.nav-tabs .nav-link:focus {
+  color: var(--primary-pub-color-1);
+  border-bottom: 3px solid var(--primary-pub-color-2);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-pub-color-1);
+  border-bottom: 3px solid var(--primary-pub-color-2);
+}
+
+/* Dash DataTable */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+  --border: lightgrey !important;
+  --accent: none !important;
+  --faded-dropdown: #000 !important;
+  font-family: "Open Sans" !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+  background-color: var(--primary-pub-color-2) !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+  background-color: #fff !important;
+  color: #323232 !important;
+  text-align: left !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner input:not([type="radio"]):not([type="checkbox"]) {
+  color: #fff !important;
+}
+
+#app-info-p {
+  font-size: 2.6rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+  margin-bottom: 1.2rem;
+  margin-right: 10px;
+  margin-top: 1.2rem;
+  text-align: right;
+}
+
+.form-control {
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2.45;
+}
+
+.input-group-text {
+  font-size: 1.5rem;
+  background-color: #BDAD78;
+  color: #fff;
+  line-height: 2.45;
+}
